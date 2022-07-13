@@ -1,8 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import votingReducer from "../reducers/votingSlice";
+import galleryReducer from "../reducers/gallerySlice";
+
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    voting:  votingReducer,
+    gallery: galleryReducer
   },
 });
