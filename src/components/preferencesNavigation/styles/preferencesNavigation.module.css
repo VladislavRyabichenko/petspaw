@@ -1,0 +1,56 @@
+.prefNavWrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 0px;
+  margin: 10px 0;
+}
+
+.searchWrapper {
+  grid-column: 1/3;
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  background: white;
+  border-radius: 20px;
+  padding: 0 10px;
+}
+
+.inputWrapper {
+  grid-column: 1/3;
+  display: flex;
+  align-items: center;
+}
+.inputWrapper input {
+  width: 100%;
+  border: none;
+  padding: 0;
+}
+.inputWrapper input:focus {
+  outline: none;
+}
+
+.buttonWrapper {
+  grid-column: 3;
+  display: flex;
+  align-items: center;
+}
+.buttonWrapper button {
+  padding: 0;
+  border: none;
+  background: none;
+}
+.buttonWrapper button img {
+  width: 40px;
+}
+
+.navLinks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.navLinks img {
+  width: 50px;
+}
+
+/*# sourceMappingURL=preferencesNavigation.module.css.map */

@@ -1,0 +1,53 @@
+.galleryWrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background: white;
+  border-radius: 20px;
+}
+.galleryWrapper .galleryImageChunk {
+  max-height: 400px;
+  margin: 10px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+.galleryWrapper .galleryImageChunk .imageWrapper:nth-child(1) {
+  grid-area: 1/1/3/2;
+}
+.galleryWrapper .galleryImageChunk .imageWrapper:nth-child(2) {
+  grid-area: 1/2/2/3;
+}
+.galleryWrapper .galleryImageChunk .imageWrapper:nth-child(3) {
+  grid-area: 1/3/2/4;
+}
+.galleryWrapper .galleryImageChunk .imageWrapper:nth-child(4) {
+  grid-area: 2/2/4/4;
+}
+.galleryWrapper .galleryImageChunk .imageWrapper:nth-child(5) {
+  grid-area: 3/1/4/2;
+}
+.galleryWrapper .galleryImageChunk .imageWrapperAlternative:nth-child(1) {
+  grid-area: 1/1/2/2;
+}
+.galleryWrapper .galleryImageChunk .imageWrapperAlternative:nth-child(2) {
+  grid-area: 1/2/2/3;
+}
+.galleryWrapper .galleryImageChunk .imageWrapperAlternative:nth-child(3) {
+  grid-area: 1/3/3/4;
+}
+.galleryWrapper .galleryImageChunk .imageWrapperAlternative:nth-child(4) {
+  grid-area: 2/1/4/3;
+}
+.galleryWrapper .galleryImageChunk .imageWrapperAlternative:nth-child(5) {
+  grid-area: 3/3/4/4;
+}
+.galleryWrapper .galleryImageChunk img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+/*# sourceMappingURL=gallery.module.css.map */

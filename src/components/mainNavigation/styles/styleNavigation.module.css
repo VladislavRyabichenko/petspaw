@@ -1,3 +1,10 @@
+.mainNavigationStick {
+  flex-direction: column;
+  height: 300px;
+  position: sticky;
+  top: 40px;
+}
+
 .mainNavigationLinks {
   display: grid;
   grid-template-columns: repeat(3, 0.9fr);

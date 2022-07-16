@@ -1,11 +1,11 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
 
-import stylesNavigation from "./styleNavigation.module.scss";
+import stylesNavigation from "./styles/styleNavigation.module.scss";
 
 export function Navigation() {
   return (
-    <div className={stylesNavigation.mainNavigation}>
+    <div className={stylesNavigation.mainNavigationStick}>
       <div className={stylesNavigation.logo}>
         <div className={stylesNavigation.logo}>
           <img src="./images/logo.svg" alt="LOGO" />

@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Outlet } from "react-router-dom";
-import { PrefNavigation } from "../components/preferencesNavigation";
+import { PrefNavigation } from "../components/preferencesNavigation/preferencesNavigation";
 
 export function WrapperPage() {
   return (
