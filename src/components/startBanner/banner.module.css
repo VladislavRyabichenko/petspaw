@@ -1,0 +1,27 @@
+.bannerBg {
+  overflow: hidden;
+  flex: 1;
+  display: flex;
+}
+.bannerBg .backgroundWrapper {
+  display: flex;
+  padding: 20px 20px 20px 60px;
+}
+.bannerBg .background {
+  border-radius: 10px;
+  background: #f5b5a3;
+}
+.bannerBg img {
+  position: relative;
+  width: 110%;
+  top: -10%;
+  right: 10%;
+  z-index: 1000;
+}
+@media all and (max-width: 960px) {
+  .bannerBg {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=banner.module.css.map */

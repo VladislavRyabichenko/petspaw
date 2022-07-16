@@ -1,0 +1,38 @@
+.btn, .btnBack {
+  width: 45px;
+  height: 45px;
+  border-radius: 15px;
+  border: none;
+  background: white;
+}
+.btn:hover, .btnBack:hover {
+  cursor: pointer;
+  background: #f5b5a3;
+}
+
+.btnBack {
+  background: #FBE0DC;
+}
+
+.btnUpload {
+  width: 100%;
+  border: none;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  border-radius: 10px;
+  font-family: Jost, sans-serif;
+  color: white;
+  background: #FBE0DC;
+}
+.btnUpload img {
+  margin-right: 10px;
+}
+.btnUpload:hover {
+  cursor: pointer;
+  background: #f5b5a3;
+}
+
+/*# sourceMappingURL=buttonStyles.module.css.map */

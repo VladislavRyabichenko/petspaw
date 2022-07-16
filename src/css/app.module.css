@@ -1,0 +1,20 @@
+.mainWrapper {
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  background: aliceblue;
+  padding: 20px;
+  justify-self: center;
+  max-width: 1800px;
+}
+.mainWrapper > div {
+  flex: 1;
+}
+.mainNavigationWrapper {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=app.module.css.map */
