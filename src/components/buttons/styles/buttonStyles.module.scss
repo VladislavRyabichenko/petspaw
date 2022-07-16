@@ -1,0 +1,54 @@
+
+.btn {
+  width: 45px;
+  height: 45px;
+  //padding: 15px 15px;
+  border-radius: 15px;
+  border: none;
+  background: white;
+
+  img{
+    //width: 50%;
+    //height: 50%;
+    //width: 20px;
+    //height: 20px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background: #f5b5a3;
+  }
+}
+
+.btnBack {
+  @extend .btn;
+  background: #FBE0DC;
+}
+
+.btnUpload {
+  width: 100%;
+
+  border:none;
+
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  height: 100%;
+  border-radius: 10px;
+
+  font-family: Jost, sans-serif;
+  color: white;
+  background: #FBE0DC;
+
+  img{
+    margin-right: 10px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background: #f5b5a3;
+  }
+
+
+}

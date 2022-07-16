@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { requestGet } from "../components/gallery/galleryAPI";
-import { requestGetBreeds } from "../components/gallery/galleryAPI";
+import { requestGet } from "../components/gallery/API/galleryAPI";
+import { requestGetBreeds } from "../components/gallery/API/galleryAPI";
 
 const initialState = {
   images: [],
