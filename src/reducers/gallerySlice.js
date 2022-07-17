@@ -5,11 +5,12 @@ import { requestGetBreeds } from "../components/gallery/API/galleryAPI";
 const initialState = {
   images: [],
   status: "idle",
+  paginationCount: 0,
   filters: {
     breedID: "",
     type: "jpg,png,gif",
     limit: "5",
-    order: "DESC",
+    order: "",
     page: 0,
   },
   breeds: [],
@@ -22,7 +23,7 @@ const getOnlyNameId = (data) => {
   let formatted = [];
   data.map((entity) => {
     formatted.push({
-      id: entity.id,
+      value: entity.id,
       name: entity.name,
     });
   });
@@ -39,9 +40,7 @@ const createChunks = (arr) => {
 };
 
 export const fetchImages = createAsyncThunk("getImages", async (data) => {
-  console.log("data", data);
   const response = await requestGet(data); //await service.getImages()
-  console.log("responese", response);
   return response;
 });
 
@@ -65,6 +64,14 @@ export const gallerySlice = createSlice({
 
     setTypeFilter: (state, action) => {
       state.filters.type = action.payload;
+    },
+
+    setOrderFilter: (state, action) => {
+      state.filters.order = action.payload;
+    },
+
+    setPage: (state, action) => {
+      state.filters.page = action.payload;
     },
     // setCurrentImages: (state, action) => {
     //     state.images = action.payload
@@ -90,6 +97,7 @@ export const gallerySlice = createSlice({
         state.status = "idle";
         console.log("loaded breeds");
         let formattedBreeds = getOnlyNameId(action.payload);
+        console.log("FORSMT", formattedBreeds);
         state.breeds = formattedBreeds;
       });
   },

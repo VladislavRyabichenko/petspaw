@@ -1,24 +1,18 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-
-import { GalleryFilters } from "./galleryFilters/galleryFilters";
-import { fetchImages } from "../../reducers/gallerySlice";
-
-import { GalleryNavBar } from "./galleryNavBar/galleryNavBar";
-
+import React, { useEffect } from "react";
 import stylesGallery from "./styles/gallery.module.scss";
-import { Image } from "./imageComponent/image";
+import { useDispatch, useSelector } from "react-redux";
+import { GalleryFilters } from "./galleryFilters/galleryFilters";
+import { GalleryNavBar } from "./galleryNavBar/galleryNavBar";
+import { Loading } from "../loading/loading";
+import { GalleryImages } from "./galleryImages/galleryImages";
+import { fetchImages } from "../../reducers/gallerySlice";
+import { Pagination } from "../buttons/paginationButtons";
 
 export function Gallery() {
   const dispatch = useDispatch();
 
-  let imagesSelected = useSelector((state) => state.gallery.images);
-
-  console.log("IMAGES selected", imagesSelected);
-
+  const status = useSelector((state) => state.gallery.status);
   const filtersSelected = useSelector((state) => state.gallery.filters);
-
-  let showAlternativeTemplate = false;
 
   // let [displayedEntities, setDisplayedEntities] = useState([])
   // // чтобы присвоить значения в случае
@@ -28,10 +22,7 @@ export function Gallery() {
   //     setDisplayedEntities(imagesSelected)
   // },[imagesSelected])
 
-  console.log("images", imagesSelected);
-
   useEffect(() => {
-    console.log("FIlters", filtersSelected);
     dispatch(fetchImages(filtersSelected));
   }, [filtersSelected]);
 
@@ -45,33 +36,9 @@ export function Gallery() {
         <GalleryFilters />
       </div>
 
-      <div className={stylesGallery.galleryImages}>
-        {imagesSelected.map((chunk, idx) => {
-          return (
-            <div key={idx} className={stylesGallery.galleryImageChunk}>
-              {chunk.map((elem, idx) => {
-                let template = showAlternativeTemplate
-                  ? stylesGallery.imageWrapperAlternative
-                  : stylesGallery.imageWrapper;
+      {status === "loading" ? <Loading /> : <GalleryImages />}
 
-                if (idx + 1 === 5) {
-                  showAlternativeTemplate = !showAlternativeTemplate;
-                }
-                return (
-                  <div className={template} key={idx}>
-                    {/*<div className={stylesGallery.overlay}></div>*/}
-                    <Image props={{ elem, template }} />
-
-                    {/*<img src={elem.url} alt="idx" />*/}
-                  </div>
-                );
-              })}
-            </div>
-          );
-        })}
-      </div>
-
-      <div className={stylesGallery.paginationWrapper}></div>
+      {/*<Pagination />*/}
     </div>
   );
 }

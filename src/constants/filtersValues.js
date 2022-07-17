@@ -39,7 +39,7 @@ export const LIMIT_FILTER = {
 };
 
 export const ORDER_FILTER = {
-  type: "Limit",
+  type: "Order",
   optionValues: [
     {
       name: "Random",
