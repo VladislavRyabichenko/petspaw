@@ -35,4 +35,28 @@
   background: #f5b5a3;
 }
 
+.pagination {
+  display: flex;
+  justify-content: center;
+  background: aliceblue;
+  padding: 10px;
+  border-radius: 20px;
+}
+.pagination > div {
+  margin: 0 10px;
+}
+.pagination > div button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-family: Jost, sans-serif;
+  color: white;
+  background: #f5b5a3;
+}
+.pagination > div button:hover {
+  cursor: pointer;
+  background: #FBE0DC;
+}
+
 /*# sourceMappingURL=buttonStyles.module.css.map */
