@@ -10,7 +10,7 @@ export function FilterSelect({ props }) {
   return (
     <div className={stylesFilterSelect.filterSelectWrapper}>
       <p>{filterType}</p>
-      <select onChange={(e) => callBack()} defaultValue="">
+      <select onChange={(e) => callBack(e)} defaultValue="">
         {optionValues.map((dataObj, idx) => {
           return (
             <option key={idx} value={dataObj.value}>

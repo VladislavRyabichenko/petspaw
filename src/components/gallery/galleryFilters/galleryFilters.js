@@ -40,19 +40,19 @@ export function GalleryFilters() {
       <FilterSelect
         props={{
           ...ORDER_FILTER,
-          callback: () => console.log("ORDER filter change"),
+          callback: (e) => console.log("ORDER filter change"),
         }}
       />
       <FilterSelect
         props={{
           ...BREED_FILTER,
-          callback: () => console.log("Breed filter change"),
+          callback: (e) => console.log("Breed filter change"),
         }}
       />
       <FilterSelect
         props={{
           ...TYPE_FILTER,
-          callback: () => console.log("TYPE filter change"),
+          callback: (e) => console.log("TYPE filter change"),
         }}
       />
 

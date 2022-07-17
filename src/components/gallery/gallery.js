@@ -7,6 +7,7 @@ import { fetchImages } from "../../reducers/gallerySlice";
 import { GalleryNavBar } from "./galleryNavBar/galleryNavBar";
 
 import stylesGallery from "./styles/gallery.module.scss";
+import { Image } from "./imageComponent/image";
 
 export function Gallery() {
   const dispatch = useDispatch();
@@ -58,7 +59,10 @@ export function Gallery() {
                 }
                 return (
                   <div className={template} key={idx}>
-                    <img src={elem.url} alt="idx" />
+                    {/*<div className={stylesGallery.overlay}></div>*/}
+                    <Image props={{ elem, template }} />
+
+                    {/*<img src={elem.url} alt="idx" />*/}
                   </div>
                 );
               })}

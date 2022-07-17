@@ -1,0 +1,40 @@
+.overlay {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  border-radius: 10px;
+}
+.overlay .background {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.overlay:hover {
+  cursor: pointer;
+}
+.overlay:hover .background {
+  background: rgba(255, 134, 142, 0.4);
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+}
+.overlay:hover .background .link {
+  align-self: center;
+}
+.overlay:hover .background .link button {
+  width: 45px;
+  height: 45px;
+  border-radius: 15px;
+  border: none;
+  background: white;
+}
+.overlay:hover .background .link button:hover {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=image.module.css.map */
