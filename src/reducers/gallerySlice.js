@@ -73,6 +73,18 @@ export const gallerySlice = createSlice({
     setPage: (state, action) => {
       state.filters.page = action.payload;
     },
+
+    setDefaultFilters: (state, action) => {
+      state.filters = {
+        filters: {
+          breedID: "",
+          type: "jpg,png,gif",
+          limit: "5",
+          order: "",
+          page: 0,
+        },
+      };
+    },
     // setCurrentImages: (state, action) => {
     //     state.images = action.payload
     // }
@@ -97,7 +109,6 @@ export const gallerySlice = createSlice({
         state.status = "idle";
         console.log("loaded breeds");
         let formattedBreeds = getOnlyNameId(action.payload);
-        console.log("FORSMT", formattedBreeds);
         state.breeds = formattedBreeds;
       });
   },
