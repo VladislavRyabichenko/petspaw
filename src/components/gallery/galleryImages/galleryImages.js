@@ -23,6 +23,7 @@ export function GalleryImages() {
                 if (idx + 1 === 5) {
                   showAlternativeTemplate = !showAlternativeTemplate;
                 }
+
                 return (
                   <div className={template} key={idx}>
                     <Image props={{ elem, template }} />

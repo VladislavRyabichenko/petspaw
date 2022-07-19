@@ -6,7 +6,9 @@ import { GalleryNavBar } from "./galleryNavBar/galleryNavBar";
 import { Loading } from "../loading/loading";
 import { GalleryImages } from "./galleryImages/galleryImages";
 import { fetchImages } from "../../reducers/gallerySlice";
-import { Pagination } from "../buttons/paginationButtons";
+
+import { getFavouriteImages } from "../../reducers/votingSlice";
+import { Upload } from "./modalUpload/modal";
 
 export function Gallery() {
   const dispatch = useDispatch();
@@ -24,6 +26,7 @@ export function Gallery() {
 
   useEffect(() => {
     dispatch(fetchImages(filtersSelected));
+    dispatch(getFavouriteImages());
   }, [filtersSelected]);
 
   return (
@@ -38,7 +41,7 @@ export function Gallery() {
 
       {status === "loading" ? <Loading /> : <GalleryImages />}
 
-      {/*<Pagination />*/}
+      <Upload />
     </div>
   );
 }
