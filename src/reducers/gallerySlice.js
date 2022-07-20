@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { requestGet } from "../components/gallery/API/galleryAPI";
+import { requestGet, sendImage } from "../components/gallery/API/galleryAPI";
 import { requestGetBreeds } from "../components/gallery/API/galleryAPI";
 
 const initialState = {
@@ -14,6 +14,7 @@ const initialState = {
     page: 0,
   },
   breeds: [],
+  uploadSuccessful: null,
 };
 
 export const selectFilters = (state) => state.filters;
@@ -47,6 +48,13 @@ export const fetchImages = createAsyncThunk("getImages", async (data) => {
 export const fetchBreeds = createAsyncThunk("getBreeds", async () => {
   const response = await requestGetBreeds(); //await service.getImages()
   console.log("responese", response);
+  return response;
+});
+
+export const uploadImage = createAsyncThunk("uploadImage", async (image) => {
+  console.log("UPLOAD IMAGE", image);
+  const response = await sendImage(image);
+
   return response;
 });
 

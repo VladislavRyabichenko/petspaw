@@ -16,6 +16,7 @@ import { Disliked } from "./pages/dislikedPage";
 import { Favourite } from "./pages/favouritePage";
 
 import stylesApp from "./css/app.module.scss";
+import { Upload } from "./components/gallery/modalUpload/modal";
 
 function App() {
   return (
@@ -28,12 +29,15 @@ function App() {
         <Route index element={<StartScreen />} />
 
         <Route path="/" element={<WrapperPage />}>
+          <Route path="/upload" element={<Upload />} />
           <Route path="voting" element={<VotingPage />} />
           <Route path="breeds" element={<BreedsPage />}>
             <Route index element={<AllBreeds />} />
             <Route path="breed" element={<BreedPage />} />
           </Route>
-          <Route path="gallery" element={<GalleryPage />} />S
+          <Route path="gallery" element={<GalleryPage />}>
+            <Route path="upload" element={<Upload />} />
+          </Route>
           <Route path="liked" element={<Liked />} />
           <Route path="disliked" element={<Disliked />} />
           <Route path="favourite" element={<Favourite />} />
