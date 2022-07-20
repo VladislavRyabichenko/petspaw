@@ -21,7 +21,7 @@ export function Gallery() {
   // // если сайт открыть сразу на странице галерее,
   // // а не перейти с главного екрана
   // useEffect(()=>{
-  //     setDisplayedEntities(imagesSelected)
+  //     setDisplaygitedEntities(imagesSelected)
   // },[imagesSelected])
 
   useEffect(() => {
@@ -31,6 +31,7 @@ export function Gallery() {
 
   return (
     <div className={stylesGallery.galleryWrapper}>
+      {/*<Upload />*/}
       <div>
         <GalleryNavBar />
       </div>
@@ -41,7 +42,7 @@ export function Gallery() {
 
       {status === "loading" ? <Loading /> : <GalleryImages />}
 
-      <Upload />
+      {/*<Upload />*/}
     </div>
   );
 }

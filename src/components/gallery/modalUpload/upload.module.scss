@@ -2,11 +2,189 @@
 .modalWrapper {
 
   position: absolute;
-  z-index: 999;
 
-
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 100%;
+  //height: 100%;
+  height: 100vh;
+  background: rgb(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: end;
 
-  background: #f5b5a3;
+
+  .modal {
+
+    overflow: hidden;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+
+    width: 55%;
+    height: 95%;
+
+    @media all and (max-width:768px) {
+      width: 100%;
+      height: 100%;
+    }
+
+
+    //background: red;
+
+
+    top: 0;
+    left: 0;
+    position: relative;
+
+
+    .upload {
+      border-radius: 20px;
+      display: flex;
+      align-self: center;
+      position: relative;
+      width: 95%;
+      height: 95%;
+      background: aliceblue;
+
+      flex-direction: column;
+      //justify-content: ;
+
+      .buttonWrapper {
+        display: flex;
+        justify-content: flex-end;
+        padding: 10px;
+
+        //border: 1px solid #000;
+      }
+      .titleWrapper {
+        display: flex;
+        justify-content: center;
+        margin: 40px 0 0 0 ;
+        span{
+          font-family: Jost, sans-serif;
+          font-weight: bold;
+          font-size: 1.25rem;
+        }
+      }
+      .guidLinesTextWrapper {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0 0 0 ;
+        span{
+          color: #8C8C8C;
+          font-family: Jost, sans-serif;
+          font-size: 0.7rem;
+        }
+        a {
+          text-decoration: none;
+          color: #FF868E;
+        }
+      }
+
+
+      .wrapper {
+        margin: 20px 0;
+        width: 100%;
+        //background: red;
+        height: 250px;
+
+
+        //min-height: 100px;
+        //height: 350px;
+        //height: 100%;
+        //height: 650px;
+        //border: 1px solid #000;
+
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        .dropZone {
+
+          border: 5px dashed #000;
+
+
+
+          //background: blue;
+          padding: 15px;
+          width: 50%;
+          height: 90%;
+          //background: blue;
+          align-self: center;
+          border-radius: 20px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          position: relative;
+
+          //.failed {
+          //  background: blue;
+          //  border: 10px dashed #000;
+          //}
+
+          .dragText {
+            width: 100%;
+            //background: white;
+            display: flex;
+             justify-content: center;
+            //position: absolute;
+          }
+
+          .previewImg {
+            position: absolute;
+            display: flex;
+            align-self: center;
+
+            width: 90%;
+            height: 90%;
+            img{
+              border-radius: 40px;
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+        .sendImageWrapper {
+          margin: 10px 0;
+          //background: blue;
+          display: flex;
+          flex-direction: column;
+          align-content: center;
+
+          span {
+            font-size: 1.1em;
+            font-family: Jost, sans-serif;
+
+            text-align: center;
+            //background: blueviolet;
+          }
+
+          button {
+            margin: 10px 0;
+            align-self: center;
+            width: 30%;
+
+            background: #FF868E;
+            border: none;
+            border-radius: 10px;
+
+            padding: 10px;
+            //font-size: em;
+            color: white;
+            font-family: Jost, sans-serif;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+
+.failed {
+  background: rgb(255, 0, 25, 0.3);
+  //border: 10px dashed red;
+}
+.success {
+  background: rgba(71, 255, 26, 0.3);
+  //border: 10px dashed red;
 }

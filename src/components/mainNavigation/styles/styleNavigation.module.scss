@@ -1,8 +1,9 @@
 
 .mainNavigationStick{
   flex-direction: column;
-  height: 300px;
-
+  border: 1px solid #000;
+  height: 400px;
+  background: red;
   position: sticky;
   top: 40px;
 }

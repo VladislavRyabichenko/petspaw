@@ -256,3 +256,27 @@ export const requestGetBreeds = async () => {
   //
   // return await response;
 };
+
+export const sendImage = async (data) => {
+  console.log("data,", data);
+  let url = "https://api.thecatapi.com/v1";
+  let response = await fetch("https://api.thecatapi.com/v1/images/upload", {
+    method: "POST",
+    // withCredentials: true,
+    headers: {
+      // "content-Type": "multipart/form-data",
+      "x-api-key": "1a47e138-6a44-4723-933c-0e7fd2675591",
+    },
+    body: data,
+  })
+    .then((resp) => resp.json())
+    .then((data) => {
+      console.log("set", data);
+      return data;
+    })
+    .catch((error) => {
+      console.log("err");
+      return error;
+    });
+  return await response;
+};

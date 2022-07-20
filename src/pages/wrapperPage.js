@@ -5,7 +5,15 @@ import { PrefNavigation } from "../components/preferencesNavigation/preferencesN
 
 export function WrapperPage() {
   return (
-    <div className="pages-wrapper">
+    <div
+      className="pages-wrapper"
+      style={
+        {
+          // position: "relative",
+          // height: 100 + "vh",
+        }
+      }
+    >
       <PrefNavigation />
       {/*<h1>Wrapper Page</h1>*/}
       <Outlet />
