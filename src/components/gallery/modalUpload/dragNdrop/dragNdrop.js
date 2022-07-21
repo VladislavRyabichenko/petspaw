@@ -34,7 +34,7 @@ export function Dropzone() {
   const [image, setImage] = useState(null);
   const [previewUrl, setPreviewUrl] = useState("");
   const [uploadFailed, setUploadFailed] = useState(false);
-  const [uploadSuccess, setUploadSucess] = useState(false);
+  const [uploadSuccess, setUploadSuccess] = useState(false);
 
   const handleFile = (file) => {
     //you can carry out any file validations here...
@@ -110,7 +110,7 @@ export function Dropzone() {
                 setUploadFailed(true);
                 return;
               }
-              setUploadSucess(true);
+              setUploadSuccess(true);
               // dispatch(uploadImage(formData));
             }}
           >
