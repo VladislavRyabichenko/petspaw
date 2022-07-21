@@ -1,53 +1,118 @@
 
-
-
-
 .mainWrapper {
-  display: flex;
-  justify-content: space-between;
-  height: 100%;
-  //height: 100vh;
-  position: sticky;
-  background: green;
-  padding: 20px;
-
   width: 100%;
-
-  justify-self: center;
-
-  max-width: 1800px;
-
-  >div {
-    //display: flex;
-    //align-items: center;
-    flex: 1;
-
-    >div {
-      //border: 1px solid #000;
-      //max-height: 500px;
-
-    }
-
-  }
+  //height: 100%;
+  display: flex;
+  background: #FF868E;
 }
 
 .mainNavigationWrapper {
-  padding-top: 20px;
-  //flex: 1;
-  //height: 100%;
-  background: blue;
-
-
   display: flex;
-
-  @media all and (max-width: 768px) {
-    //display: none;
-  }
-  //display: none;
-
-  flex-direction: row;
   justify-content: center;
+  background: blue;
+  flex: 1;
+}
+
+.pageWrapper {
+
+  flex: 1;
+
+  flex-direction: column;
+  padding: 10px;
+  overflow-y: auto;
 
 
+  .pageContent {
+    border-radius: 20px;
+    width: 100%;
+    //height: 10000px;
+    background: green;
+  }
 
 }
+
+
+@media all and (max-width: 769px){
+    .mainNavigationWrapper{
+      //display: none;
+      //width: 100%;
+      //height: 100%;
+    }
+
+  .hide{
+    display: none;
+  }
+}
+
+.showAsMenu {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  z-index: 100;
+}
+
+
+  //position: absolute;
+  ////display: flex;
+  //.mainWrapper{
+  //  .mainNavigationWrapper{
+  //    display: none;
+  //
+  //    width: 100%;
+  //    height: 100%;
+  //  }
+  //}
+
+
+
+
+//.mainWrapper {
+//  display: flex;
+//  justify-content: space-between;
+//  height: 100%;
+//  //height: 100vh;
+//  position: sticky;
+//  background: green;
+//  padding: 20px;
+//
+//  width: 100%;
+//
+//  justify-self: center;
+//
+//  max-width: 1800px;
+//
+//  >div {
+//    //display: flex;
+//    //align-items: center;
+//    flex: 1;
+//
+//    >div {
+//      //border: 1px solid #000;
+//      //max-height: 500px;
+//
+//    }
+//
+//  }
+//}
+//
+//.mainNavigationWrapper {
+//  padding-top: 20px;
+//  //flex: 1;
+//  //height: 100%;
+//  background: blue;
+//
+//
+//  display: flex;
+//
+//  @media all and (max-width: 768px) {
+//    //display: none;
+//  }
+//  //display: none;
+//
+//  flex-direction: row;
+//  justify-content: center;
+//
+//
+//
+//}

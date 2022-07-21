@@ -1,106 +1,325 @@
 
 .mainNavigationStick{
+  display: flex;
   flex-direction: column;
   border: 1px solid #000;
-  height: 400px;
+  width: 70%;
+  height: 60%;
+  
   background: red;
   position: sticky;
-  top: 40px;
+  top: 10px;
+
+  justify-content: space-between;
+}
+
+.logoWrapper {
+  height: 7%;
 }
 
 .mainNavigationLinks {
-  display: grid;
+  background: aliceblue;
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 
+  .menuItem{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
 
-  grid-template-columns: repeat(3, 0.9fr);
-
-  @media all and (max-width: 720px){
-    //display: none;
-    grid-template-rows: repeat(3, 0.9fr);
-
-
-    .div1{
-      grid-column: 1/4;
-
-    }
-    .div2 {
-      grid-column: 1/4;
-    }
-    .div3{
-      grid-column: 1/4;
+    .navigationIcon {
+      img {
+        width: 100%;
+      }
     }
 
+    .navigationButton {
+      display: flex;
+      justify-content: center;
+      background: #FBE0DC;
+      border-radius: 5px;
 
+      button {
+        width: 100%;
+        padding: 10px 0;
 
+        border: none;
+        border-radius: 5px;
+        background: white;
 
-  }
-
-  grid-template-rows: 1fr;
-  grid-column-gap: 7px;
-  grid-row-gap: 10px;
-
-
-
-  .div1, .div2, .div3 {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-column-gap: 7px;
-    grid-row-gap: 10px;
-
+        font-family: Jost, sans-serif;
+        color : #f5b5a3;
+      }
+    }
     &:hover {
       cursor: pointer;
 
       button {
+
         background: #f5b5a3;
         color : #ffffff;
       }
     }
   }
+}
 
-  .navigationIcon {
-    //grid-area: 1 / 1 / 4 / 2;
+.logoWrapper{
+  .cancelWrapper{
+    display: none;
+  }
+
+  .logo {
+    display: flex;
+    span {
+      align-self: center;
+      margin-left: 10px;
+
+      font-family: Jost, sans-serif;
+      font-size: 1.2em;
+
+      font-weight: bold;
+    }
+  }
+}
 
 
 
-    @media all and (max-width: 720px){
+.welcomeText {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+
+  background: #f5b5a3;
+  .greetings {
+    font-family: Jost, sans-serif;
+    font-size: 44px;
+    font-weight: bold;
+    line-height: 58px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .welcome {
+    font-family: Jost,sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    color: #E5E5E5;
+
+  }
+
+  border: 1px solid #000;
+}
+
+@media all and (max-width: 768px){
+
+  .mainNavigationStick{
+    justify-content: flex-start;
+  }
+
+  .mainNavigationStick {
+    width: 90%;
+    height: 90%;
+
+  }
+
+  .logoWrapper{
+    //.logo {
+    //  display: none;
+    //}
+
+    //display: flex;
+    //justify-content: flex-end;
+    .cancelWrapper{
       display: none;
     }
   }
 
-  .navigationMenuItem {
-    grid-row: 1/3;
-    width: 100%;
-    //grid-area: 2 / 2 / 2 / 2;
+  .welcomeText {
+    //display: none;
   }
 
-  img {
-    width: 100%;
-  }
-
-  button {
-    width: 100%;
-    padding: 10px 0;
-
-    border: none;
-    border-radius: 5px;
-    background: white;
-
-    font-family: Jost, sans-serif;
-    color : #f5b5a3;
-  }
-
-}
-.logo {
-
-  display: flex;
-  span {
+  .mainNavigationLinks{
     align-self: center;
-    margin-left: 10px;
 
-    font-family: Jost, sans-serif;
-    font-size: 1.2em;
+    width: 60%;
+    height: 30%;
 
-    font-weight: bold;
+    //flex-direction: column;
+    justify-content: space-around;
+
+    .menuItem {
+      width: 100%;
+    }
+  }
+
+
+  //.mainNavigationLinks{
+  //  height: 30%;
+  //
+  //  flex-direction: column;
+  //  justify-content: space-around;
+  //
+  //  .menuItem {
+  //    width: 100%;
+  //  }
+  //}
+  //.navigationIcon {
+  //  display: none;
+  //}
+
+  @media all and (max-width: 480px){
+
+    //.mainNavigationStick{
+    //  justify-content: flex-start;
+    //}
+
+    //.mainNavigationStick {
+    //  width: 90%;
+    //  height: 90%;
+    //
+    //}
+    //
+    .mainNavigationLinks{
+      height: 30%;
+      width: 100%; //
+      flex-direction: column;
+      justify-content: space-around;
+
+      .menuItem {
+        width: 100%;
+      }
+    }
+
+    //.logoWrapper{
+    //  .logo {
+    //    display: none;
+    //  }
+    //
+    //  display: flex;
+    //  justify-content: flex-end;
+    //  .cancelWrapper{
+    //    display: flex;
+    //  }
+    //}
+
+    //.welcomeText {
+    //  display: none;
+    //}
+    .navigationIcon {
+      display: none;
+    }
+
   }
 }
+
+
+.showMenu {
+  @media all and (max-width: 768px){
+
+    .mainNavigationStick{
+      justify-content: flex-start;
+    }
+
+    .mainNavigationStick {
+      width: 90%;
+      height: 90%;
+
+    }
+
+    .logoWrapper{
+      .logo {
+        display: none;
+      }
+
+      display: flex;
+      justify-content: flex-end;
+      .cancelWrapper{
+        display: flex;
+      }
+    }
+
+    .welcomeText {
+      display: none;
+    }
+
+    .mainNavigationLinks{
+      align-self: center;
+
+      width: 60%;
+      height: 30%;
+
+      //flex-direction: column;
+      justify-content: space-around;
+
+      .menuItem {
+        width: 100%;
+      }
+    }
+
+
+    //.mainNavigationLinks{
+    //  height: 30%;
+    //
+    //  flex-direction: column;
+    //  justify-content: space-around;
+    //
+    //  .menuItem {
+    //    width: 100%;
+    //  }
+    //}
+    //.navigationIcon {
+    //  display: none;
+    //}
+
+    @media all and (max-width: 480px){
+
+      .mainNavigationStick{
+        justify-content: flex-start;
+      }
+
+      .mainNavigationStick {
+        width: 90%;
+        height: 90%;
+
+      }
+
+      .mainNavigationLinks{
+        height: 30%;
+        width: 100%; //
+        flex-direction: column;
+        justify-content: space-around;
+
+        .menuItem {
+          width: 100%;
+        }
+      }
+
+      //.logoWrapper{
+      //  .logo {
+      //    display: none;
+      //  }
+      //
+      //  display: flex;
+      //  justify-content: flex-end;
+      //  .cancelWrapper{
+      //    display: flex;
+      //  }
+      //}
+
+      .welcomeText {
+        display: none;
+      }
+      .navigationIcon {
+        display: none;
+      }
+
+    }
+  }
+}
+
 

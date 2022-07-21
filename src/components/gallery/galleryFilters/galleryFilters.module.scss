@@ -1,7 +1,8 @@
 
 .galleryFilters {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  //grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr) 0.5fr;
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 10px;
   grid-row-gap: 10px;
@@ -11,7 +12,7 @@
 
   background: aliceblue;
 
-  padding: 5px;
+  padding: 15px;
 
   >div{
     p {
@@ -33,42 +34,73 @@
     &:nth-child(5) {
       grid-column: 6/7;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      top: 10px;
-      right: 15px;
+      height: 50px;
+      width: 50px;
 
       position: relative;
-
-      button {
-        padding: 13px 15px;
-        border-radius: 15px;
-        border: none;
-        background: white;
-
-        &:hover {
-          cursor: pointer;
-          background: #f5b5a3;
-        }
-      }
+      top: 32px;
     }
+
   }
+
+  .buttonReloadWrapper{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    position: relative;
+  }
+
+
 
   .filterSelectWrapper {
     padding: 5px;
 
     select{
-      width: 90%;
+      width: 100%;
       border: none;
-      padding: 10px;
+      padding: 15px;
       border-radius: 10px;
     }
+  }
 
-    @media screen and (max-width: 720px){
 
-      
+  @media screen and (max-width: 480px){
+    grid-template-columns: 1fr;
+
+    grid-template-rows: repeat(4, 1fr) 0.5fr;
+
+    >div{
+      &:nth-child(1) {
+        grid-row: 1;
+        grid-column: 1/2;
+      }
+      &:nth-child(2) {
+        grid-row: 2;
+        grid-column: 1/2;
+      }
+      &:nth-child(3) {
+        grid-row: 3;
+        grid-column: 1/2;
+      }
+      &:nth-child(4) {
+        grid-row: 4;
+        grid-column: 1/2;
+      }
+      &:nth-child(5) {
+        grid-row: 5;
+        grid-column: 1/2;
+        width: 100%;
+        top:0;
+      }
     }
+    .buttonReloadWrapper {
+      display: block;
+
+      button {
+        width: 100%;
+      }
+    }
+
   }
 }

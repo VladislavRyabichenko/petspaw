@@ -76,7 +76,7 @@ export function GalleryFilters() {
         }}
       />
 
-      <div>
+      <div className={stylesGalleryFilters.buttonReloadWrapper}>
         <ButtonReload
           props={{
             imgName: "icon-reload.svg",

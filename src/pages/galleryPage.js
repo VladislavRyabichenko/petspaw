@@ -6,9 +6,11 @@ import { Upload } from "../components/gallery/modalUpload/modal";
 export function GalleryPage() {
   let nav = useNavigate();
   return (
-    <div>
-      <Gallery />
-      {/*<Outlet />*/}
-    </div>
+    <Gallery />
+    // <>{/*<Gallery />*/}</>
+    // <div>
+    //   {/*<Gallery />*/}
+    // {/*<Outlet />*/}
+    // </div>
   );
 }
