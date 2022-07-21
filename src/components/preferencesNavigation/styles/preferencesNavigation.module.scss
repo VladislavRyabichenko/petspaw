@@ -82,6 +82,7 @@
     //grid-template-columns: repeat(4, 1fr);
   }
   .menuIcon {
+    width: 60px;
     grid-column: 0.5/1;
   }
 
@@ -91,6 +92,10 @@
 
   .navLinks{
     grid-column: 4/5;
+    > div{
+      height: 60px;
+      width: 60px;
+    }
 
   }
 }
@@ -107,7 +112,9 @@
     grid-row: 1/1;
     grid-column: 1/1;
 
-    border: 1px solid #000;
+    //border: 1px solid #000;
+    width: 60px;
+    height: 60px;
 
     //display: flex;
 
@@ -135,7 +142,7 @@
     grid-column: 2/3;
     >div {
       display: flex;
-      width: 90%;
+      width: 60px;
       justify-content: center;
 
       background: #8C8C8C;

@@ -27,8 +27,10 @@ export function WrapperPage({ props }) {
           showMenu: props.showMenu,
         }}
       />
+      <div className={styles.pageContent}>
+        <Outlet />
+      </div>
       {/*<h1>Wrapper Page</h1>*/}
-      <Outlet />
     </div>
   );
 }
